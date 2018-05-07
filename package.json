@@ -1,0 +1,43 @@
+{
+  "name": "gdpr-cookie-monster",
+  "version": "0.1.0",
+  "description": "A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K gzipped)",
+  "scripts": {
+    "test": "eslint src",
+    "dev": "webpack-dev-server --open",
+    "build": "webpack -p"
+  },
+  "keywords": [
+    "eu",
+    "dsvgo",
+    "opt-in",
+    "opt-out",
+    "gdpr",
+    "cookie",
+    "consent",
+    "banner"
+  ],
+  "author": "Sebastian Misch - Nerds of all Trades GmbH",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cookie": "^0.3.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "preact": "^8.2.9",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.8.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
