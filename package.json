@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K gzipped)",
   "scripts": {
-    "postinstall": "npm run build",
     "test": "eslint src",
     "dev": "webpack-dev-server --open",
     "start": "npm run dev",
