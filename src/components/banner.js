@@ -23,7 +23,7 @@ export default class Banner extends Component {
     return (
       (window.noat &&
         window.noat.cookieConsent &&
-        window.noat.cookieConsent.text) ||
+        window.noat.cookieConsent.privacyPolicyText) ||
       'Cookie Policy'
     );
   }
@@ -32,7 +32,7 @@ export default class Banner extends Component {
     return (
       (window.noat &&
         window.noat.cookieConsent &&
-        window.noat.cookieConsent.text) ||
+        window.noat.cookieConsent.privacyPolicyUrl) ||
       '/disclaimer'
     );
   }
@@ -41,7 +41,7 @@ export default class Banner extends Component {
     return (
       (window.noat &&
         window.noat.cookieConsent &&
-        window.noat.cookieConsent.text) ||
+        window.noat.cookieConsent.denyText) ||
       'Disable Cookies'
     );
   }
@@ -50,7 +50,7 @@ export default class Banner extends Component {
     return (
       (window.noat &&
         window.noat.cookieConsent &&
-        window.noat.cookieConsent.text) ||
+        window.noat.cookieConsent.allowText) ||
       'Accept'
     );
   }

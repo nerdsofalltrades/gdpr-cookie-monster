@@ -1,0 +1,100 @@
+<html>
+
+<head>
+  <title>
+    GDPR Cookie Monster
+  </title>
+</head>
+
+<body>
+  <h1>GDPR Cookie Monster</h1>
+  <p>
+    A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K gzipped).
+  </p>
+  <p>
+    This is Open-Source Software under MIT license. Use it, change it, copy it, break it. But don't sell it as your's.
+  </p>
+
+  <h2>Use it with Node &amp; Webpack</h2>
+  <pre>$ npm i gdpr-cookie-consent</pre>
+
+  <h2>Use it straight away in your Shop/ Website</h2>
+  <p>Add the following
+    <tt>script</tt> tag to your website, right before the closing
+    <tt>&lt;/body&gt;</tt> tag
+  </p>
+  <pre>&lt;script language="javascript" src="&lt;path-to&gt;/gdpr-cookie-monster-0.1.0.min.js"&gt;&lt;/script&gt;</pre>
+  <p>
+    Reload the page and it should appear at the bottom.
+  </p>
+
+  <h2>Reopening banner</h2>
+  <p>The banner asks for permission to store cookies once per session for cookie deniers and once a month for cookie approvers.
+  </p>
+  <p>To allow the user to change his mind (must have with GDPR-compliance) you must add a link in at least the footer of your
+    page (every page):</p>
+  <pre>&lt;a href="#" id="noat-cookie-consent__setup"&gt;Cookie Settings&lt;/a&gt;</pre>
+  <p>
+    This is the re-open link 🤙
+    <a href="#" id="noat-cookie-consent__setup">I am the magic link</a>.
+  </p>
+
+  <h2>Customization</h2>
+  <h3>Custom texts</h3>
+  <p>
+    Add the following script right before the
+    <tt>gdpr-cookie-monster</tt> script tag.
+  </p>
+  <pre>
+&lt;script&gt;
+  window.noat = {
+    cookieConsent: {
+      text: 'Use your text why you are using Cookies here',
+      privacyPolicyText: 'The title of the cookie policy link',
+      privacyPolicyUrl: 'The URL to the cookie policy',
+      deny: 'The deny button title',
+      allow: 'The allow button title'
+    }
+  }
+&lt;/script&gt;
+  </pre>
+
+  <h3>Custom styles</h3>
+  <p>
+    Add the following script right before the
+    <tt>gdpr-cookie-monster</tt> script tag.
+  </p>
+  <pre>
+&lt;script&gt;
+  window.noat = {
+    cookieConsent: {
+      useCustomCSS: true
+    }
+  }
+&lt;/script&gt;
+  </pre>
+  <p>
+    If you are a CSS guru now you can style everythi:ng on your own:
+  </p>
+  <tt>
+    <ul>
+      <li>.noat-cookie__consent</li>
+      <li>.noat-cookie-consent__banner</li>
+      <li>.noat-cookie-consent-banner__text</li>
+      <li>.noat-cookie-consent-banner__other-actions</li>
+      <li>.noat-cookie-consent-banner-other-actions__privacy-policy</li>
+      <li>.noat-cookie-consent-banner-other-actions__deny</li>
+      <li>.noat-cookie-consent-banner__allow</li>
+    </ul>
+  </tt>
+  <h2>Legal Notice</h2>
+  <p style="text-transform: uppercase">
+    We are no lawyers. Since this is Open-Source Software, customizable and impossible to track how it is used we cannot give
+    any warranty or promise that this piece of software is fully GDPR compliant.
+  </p>
+  <p>
+    Please contribute if there are issues.
+  </p>
+<script type="text/javascript" src="gdpr-cookie-monster-0.1.0.min.js"></script></body>
+
+</html>
