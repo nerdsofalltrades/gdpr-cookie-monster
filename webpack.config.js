@@ -1,7 +1,14 @@
 const path = require('path');
-const { name, version } = require('./package.json');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { name } = require('./package.json');
+const markdown = require('marked');
+
+fs.writeFileSync(
+  '.readme.html',
+  markdown(fs.readFileSync('README.md', 'utf8'))
+);
 
 module.exports = {
   mode: 'development',
@@ -20,17 +27,14 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Development',
-      template: 'README.html'
+      template: '.readme.html'
     })
   ],
-
   output: {
-    filename: `${name}-${version}.min.js`,
+    filename: `${name}.min.js`,
     path: path.resolve(__dirname, 'dist')
   }
 };
