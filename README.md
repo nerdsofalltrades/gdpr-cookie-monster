@@ -1,5 +1,8 @@
 # GDPR Cookie Monster
 
+[![Build Status](https://api.travis-ci.org/nerdsofalltrades/gdpr-cookie-monster.svg?branch=master)](https://travis-ci.org/nerdsofalltrades/gdpr-cookie-monster)
+[![Greenkeeper badge](https://badges.greenkeeper.io/nerdsofalltrades/gdpr-cookie-monster.svg)](https://greenkeeper.io/)
+
 A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K
 gzipped).
 

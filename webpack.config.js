@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const { name } = require('./package.json');
 const markdown = require('marked');
 
 fs.writeFileSync(
@@ -34,7 +33,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: `${name}.min.js`,
+    filename: `gdpr-cookie-monster.min.js`,
     path: path.resolve(__dirname, 'dist')
   }
 };
