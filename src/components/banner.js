@@ -74,18 +74,24 @@ export default class Banner extends Component {
       window.noat.cookieConsent.useCustomCSS
         ? {}
         : null;
-
+    const isMobile = window.innerWidth < 640;
     return (
       <div
         className="noat-cookie__consent"
         style={
           useCustomStyles || {
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            transition: 'transform .3s ease-out',
-            transform: `translateY(${this.state.answered ? '100%' : '0'})`
+            ...{
+              position: 'fixed',
+              zIndex: 2147483647,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              transition: 'transform .3s ease-out',
+              transform: `translateY(${this.state.answered ? '100%' : '0'})`
+            },
+            /* eslint-disable indent */
+            ...(isMobile ? {} : {})
+            /* eslint-enable indent */
           }
         }
       >
@@ -93,12 +99,21 @@ export default class Banner extends Component {
           className="noat-cookie-consent__banner"
           style={
             useCustomStyles || {
-              display: 'flex',
-              justifyContent: 'space-between',
-              padding: '1em',
-              fontFamily: 'Sans-Serif',
-              background: 'rgba(0,0,0,.8)',
-              color: ' #fafafa'
+              ...{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '1em',
+                fontFamily: 'Sans-Serif',
+                background: 'rgba(0,0,0,.8)',
+                color: ' #fafafa'
+              },
+              /* eslint-disable indent */
+              ...(isMobile
+                ? {
+                    flexFlow: 'column'
+                  }
+                : {})
+              /* eslint-enable indent */
             }
           }
         >
@@ -106,7 +121,12 @@ export default class Banner extends Component {
             className="noat-cookie-consent-banner__text"
             style={
               useCustomStyles || {
-                alignSelf: 'center'
+                ...{
+                  alignSelf: 'center'
+                },
+                /* eslint-disable indent */
+                ...(isMobile ? {} : {})
+                /* eslint-enable indent */
               }
             }
           >
@@ -116,14 +136,23 @@ export default class Banner extends Component {
             className="noat-cookie-consent-banner__other-actions"
             style={
               useCustomStyles || {
-                flexGrow: 1,
-                padding: '0 2em',
-                display: 'flex',
-                flexFlow: 'column',
-                justifyContent: 'center',
-                whiteSpace: 'nowrap',
-                opacity: 0.8,
-                fontSize: '75%'
+                ...{
+                  flexGrow: 1,
+                  padding: '0 2em',
+                  display: 'flex',
+                  flexFlow: 'column',
+                  justifyContent: 'center',
+                  whiteSpace: 'nowrap',
+                  opacity: 0.8,
+                  fontSize: '75%'
+                },
+                /* eslint-disable indent */
+                ...(isMobile
+                  ? {
+                      padding: '1em 0'
+                    }
+                  : {})
+                /* eslint-enable indent */
               }
             }
           >
@@ -131,7 +160,12 @@ export default class Banner extends Component {
               className="noat-cookie-consent-banner-other-actions__privacy-policy"
               style={
                 useCustomStyles || {
-                  color: 'inherit'
+                  ...{
+                    color: 'inherit'
+                  },
+                  /* eslint-disable indent */
+                  ...(isMobile ? {} : {})
+                  /* eslint-enable indent */
                 }
               }
               target="newPricayPolicy"
@@ -144,7 +178,12 @@ export default class Banner extends Component {
               className="noat-cookie-consent-banner-other-actions__deny"
               style={
                 useCustomStyles || {
-                  color: 'inherit'
+                  ...{
+                    color: 'inherit'
+                  },
+                  /* eslint-disable indent */
+                  ...(isMobile ? {} : {})
+                  /* eslint-enable indent */
                 }
               }
               href="#"
@@ -157,13 +196,26 @@ export default class Banner extends Component {
             className="noat-cookie-consent-banner__allow"
             style={
               useCustomStyles || {
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0 2em',
-                background: '#38e',
-                borderRadius: '4px',
-                textTransform: 'uppercase',
-                cursor: 'pointer'
+                ...{
+                  display: 'flex',
+                  alignItems: 'center',
+                  alignSelf: 'center',
+                  maxHeight: '5em',
+                  minHeight: '5em',
+                  padding: '0 2em',
+                  background: '#38e',
+                  borderRadius: '4px',
+                  textTransform: 'uppercase',
+                  cursor: 'pointer'
+                },
+                /* eslint-disable indent */
+                ...(isMobile
+                  ? {
+                      justifyContent: 'center',
+                      alignSelf: 'auto'
+                    }
+                  : {})
+                /* eslint-enable indent */
               }
             }
             onClick={this.handleAllow}
