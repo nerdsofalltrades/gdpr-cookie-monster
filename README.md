@@ -90,6 +90,11 @@ If you are a CSS guru now you can style everythi:ng on your own:
 * .noat-cookie-consent-banner-other-actions\_\_deny
 * .noat-cookie-consent-banner\_\_allow
 
+## See it live
+
+* https://nerdsofalltrad.es
+* https://uhrwerk.berlin
+
 ## Legal Notice
 
 WE ARE NO LAWYERS. SINCE THIS IS OPEN-SOURCE SOFTWARE, CUSTOMIZABLE AND
