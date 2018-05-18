@@ -51,15 +51,16 @@ Add the following code right before the `gdpr-cookie-monster` script tag:
 
 ```
 <script>
-window.noat = {
-  cookieConsent: {
-    text: 'Use your text why you are using Cookies here',
-    privacyPolicyText: 'The title of the cookie policy link',
-    privacyPolicyUrl: 'The URL to the cookie policy',
-    deny: 'The deny button title',
-    allow: 'The allow button title'
-  }
+if (!window.noat) {
+  window.noat = {};
 }
+window.noat.cookieConsent = {
+  text: 'Use your text why you are using Cookies here',
+  privacyPolicyText: 'The title of the cookie policy link',
+  privacyPolicyUrl: 'The URL to the cookie policy',
+  deny: 'The deny button title',
+  allow: 'The allow button title'
+};
 </script>
 ```
 
@@ -69,11 +70,13 @@ Add the following code right before the `gdpr-cookie-monster` script tag:
 
 ```
 <script>
-window.noat = {
-  cookieConsent: {
-    useCustomCSS: true
-  }
+if (!window.noat) {
+  window.noat = {};
 }
+window.noat.cookieConsent = {
+  // ... keep settings from above here
+  useCustomCSS: true
+};
 </script>
 ```
 

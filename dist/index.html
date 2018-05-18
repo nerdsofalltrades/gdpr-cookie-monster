@@ -26,24 +26,27 @@ add a link in at least the footer of your page (every page):</p>
 <h3 id="custom-texts">Custom texts</h3>
 <p>Add the following code right before the <code>gdpr-cookie-monster</code> script tag:</p>
 <pre><code>&lt;script&gt;
-window.noat = {
-  cookieConsent: {
-    text: &#39;Use your text why you are using Cookies here&#39;,
-    privacyPolicyText: &#39;The title of the cookie policy link&#39;,
-    privacyPolicyUrl: &#39;The URL to the cookie policy&#39;,
-    deny: &#39;The deny button title&#39;,
-    allow: &#39;The allow button title&#39;
-  }
+if (!window.noat) {
+  window.noat = {};
 }
+window.noat.cookieConsent = {
+  text: &#39;Use your text why you are using Cookies here&#39;,
+  privacyPolicyText: &#39;The title of the cookie policy link&#39;,
+  privacyPolicyUrl: &#39;The URL to the cookie policy&#39;,
+  deny: &#39;The deny button title&#39;,
+  allow: &#39;The allow button title&#39;
+};
 &lt;/script&gt;
 </code></pre><h3 id="custom-styles">Custom styles</h3>
 <p>Add the following code right before the <code>gdpr-cookie-monster</code> script tag:</p>
 <pre><code>&lt;script&gt;
-window.noat = {
-  cookieConsent: {
-    useCustomCSS: true
-  }
+if (!window.noat) {
+  window.noat = {};
 }
+window.noat.cookieConsent = {
+  // ... keep settings from above here
+  useCustomCSS: true
+};
 &lt;/script&gt;
 </code></pre><p>If you are a CSS guru now you can style everythi:ng on your own:</p>
 <ul>
