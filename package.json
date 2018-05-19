@@ -1,8 +1,7 @@
 {
   "name": "@nerdsofalltrad.es/gdpr-cookie-monster",
-  "version": "0.1.2",
-  "description":
-    "A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K gzipped)",
+  "version": "0.1.3",
+  "description": "A minimal EU-GDPR compliant cookie consent banner for websites and shops (5.6K gzipped)",
   "scripts": {
     "test": "eslint src",
     "dev": "webpack-dev-server --open",
