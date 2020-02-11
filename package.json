@@ -40,7 +40,7 @@
     "preact": "^8.2.9",
     "prettier": "^1.12.1",
     "prettier-eslint": "^8.8.1",
-    "webpack": "^4.6.0",
+    "webpack": "^4.41.6",
     "webpack-cli": "^2.1.2",
     "webpack-dev-server": "^3.1.4"
   },
