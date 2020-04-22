@@ -31,7 +31,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
-    "cookie": "^0.3.1",
+    "cookie": "^0.4.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "express": "^4.16.3",
